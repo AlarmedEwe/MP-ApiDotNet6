@@ -7,6 +7,7 @@ internal sealed class Person
     public string Name { get; private set; }
     public string Document { get; private set; }
     public string Phone { get; private set; }
+    public ICollection<Purchase> Purchases { get; set; }
 
     public Person(string document, string name, string phone)
     {
@@ -15,7 +16,7 @@ internal sealed class Person
 
     public Person(int id, string document, string name, string phone)
     {
-        DomainValidationException.When(id < 0, "Id inválido: deve ser maior que 0!");
+        DomainValidationException.When(id < 0, "Id inválido: deve ser maior que zero!");
         Id = id;
         Validation(document, name, phone);
     }
