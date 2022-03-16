@@ -1,7 +1,7 @@
 ﻿using MP.ApiDotNet6.Domain.Validations;
 
 namespace MP.ApiDotNet6.Domain.Entities;
-internal sealed class Purchase
+public sealed class Purchase
 {
     public int Id { get; private set; }
     public int ProductId { get; private set; }
