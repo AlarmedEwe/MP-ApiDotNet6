@@ -12,7 +12,8 @@ internal class PersonMap : IEntityTypeConfiguration<Person>
         builder.HasKey(c => c.Id);
 
         builder.Property(c => c.Id)
-            .HasColumnName("IdPessoa");
+            .HasColumnName("IdPessoa")
+            .UseMySqlIdentityColumn();
 
         builder.Property(c => c.Document)
             .HasColumnName("Documento");
